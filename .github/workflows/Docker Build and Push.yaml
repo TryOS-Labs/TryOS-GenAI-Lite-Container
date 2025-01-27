@@ -1,0 +1,23 @@
+# By Abdullah 
+
+name: Docker Build and Push
+on:
+  push:
+    branches:
+      - main
+jobs:
+  update-docker-image:
+    name: Update Docker Image
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4.2.2
+      - name: Build and Push Docker Image
+        run: |
+          docker login --username A6du11ah --password ${{secrets.GITHUB_TOKEN}} ghcr.io
+          docker build . --tag ghcr.io/TryOS-Labs/tryos_genai_lite_container:latest
+          docker push ghcr.io/TryOS-Labs/tryos_genai_lite_container:latest
+        shell: bash
