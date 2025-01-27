@@ -18,6 +18,6 @@ jobs:
       - name: Build and Push Docker Image
         run: |
           docker login --username A6du11ah --password ${{secrets.GITHUB_TOKEN}} ghcr.io
-          docker build . --tag ghcr.io/TryOS-Labs/tryos_genai_lite_container:latest
-          docker push ghcr.io/TryOS-Labs/tryos_genai_lite_container:latest
+          docker build . --tag ghcr.io/tryos-labs/tryos_genai_lite_container:latest
+          docker push ghcr.io/tryos-labs/tryos_genai_lite_container:latest
         shell: bash
