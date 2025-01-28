@@ -6,8 +6,8 @@ on:
     branches:
       - main
 jobs:
-  update-docker-image:
-    name: Update Docker Image
+  update-docker-images:
+    name: Update Docker Images
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -15,9 +15,17 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4.2.2
-      - name: Build and Push Docker Image
+
+      - name: Build and Push Docker Image to GHCR
         run: |
           docker login --username A6du11ah --password ${{secrets.GITHUB_TOKEN}} ghcr.io
           docker build . --tag ghcr.io/tryos-labs/tryos_genai_lite_container:latest
           docker push ghcr.io/tryos-labs/tryos_genai_lite_container:latest
+        shell: bash
+
+      - name: Build and Push Docker Image to Docker Hub
+        run: |
+          docker login --username tryoslabs --password ${{secrets.DOCKER_HUB_TOKEN}} 
+          docker build . --tag tryoslabs/tryos_genai_lite_container:latest
+          docker push tryoslabs/tryos_genai_lite_container:latest
         shell: bash
