@@ -19,7 +19,7 @@ RUN yarn install
 ENV OLLAMA_HOST=0.0.0.0:11434
 ENV OLLAMA_ORIGINS=*
 
-RUN ollama serve & sleep 2 && ollama pull starcoder:1b
+RUN ollama serve & sleep 2 && ollama pull deepseek-r1:1.5b
 
 EXPOSE 11434
 EXPOSE 5173
