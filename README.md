@@ -35,7 +35,11 @@ docker pull ghcr.io/tryos-labs/tryos_genai_lite_container:latest
 
 Alternatively you can use `Docker Hub`.
 
--   [Docker Hub]()
+-   [Docker Hub](https://hub.docker.com/r/tryoslabs/tryos_genai_lite_container)
+
+```bash
+docker pull tryoslabs/tryos_genai_lite_container
+```
 
 ### Quickstart
 
