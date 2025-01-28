@@ -12,7 +12,7 @@ RUN pacman -S --noconfirm --needed base-devel git ollama nodejs-lts-hydrogen yar
 
 RUN git clone --depth 1 https://github.com/HelgeSverre/ollama-gui.git
 
-WORKDIR /ollama-guiKhadee
+WORKDIR /ollama-gui
 
 RUN yarn install
 
