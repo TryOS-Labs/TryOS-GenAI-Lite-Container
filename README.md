@@ -23,8 +23,8 @@ By default it installs `deepseek-r1:1.5b` during pull.
 
 ## Links
 
-- **GitHub Repository**: [TryOS-GenAI-Lite-Container](https://github.com/TryOS-Labs/TryOS-GenAI-Lite-Container)
-- **Docker Hub**: [tryoslabs/tryos_genai_lite_container](https://hub.docker.com/r/tryoslabs/tryos_genai_lite_container)
+-   **GitHub Repository**: [TryOS-GenAI-Lite-Container](https://github.com/TryOS-Labs/TryOS-GenAI-Lite-Container)
+-   **Docker Hub**: [tryoslabs/tryos_genai_lite_container](https://hub.docker.com/r/tryoslabs/tryos_genai_lite_container)
 
 ## Getting Started
 
@@ -51,10 +51,10 @@ docker pull tryoslabs/tryos_genai_lite_container
 1.  Start server with command:
 
 ```bash
-docker run -p 5173:5173 -p 11434:11434 tryos_genai_lite_container:latest
+docker run -p 3000:3000 -p 11434:11434 tryos_genai_lite_container:latest
 ```
 
-2. Visit `http://localhost:5137` for chat GUI.
+2. Visit `http://localhost:3000` for chat GUI.
 
 ## License
 
