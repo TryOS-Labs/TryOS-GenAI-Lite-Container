@@ -15,6 +15,23 @@ RUN git clone --depth 1 https://github.com/HelgeSverre/ollama-gui.git
 WORKDIR /ollama-gui
 
 RUN yarn install
+RUN yarn build
+
+WORKDIR /app
+
+COPY frontend /app/frontend
+
+WORKDIR /ollama-gui
+
+RUN ls /ollama-gui
+
+RUN ls /app/frontend
+
+RUN cp -r /ollama-gui/dist /app/frontend/public/
+
+WORKDIR /app/frontend
+
+RUN yarn install
 
 ENV OLLAMA_HOST=0.0.0.0:11434
 ENV OLLAMA_ORIGINS=*
@@ -22,6 +39,6 @@ ENV OLLAMA_ORIGINS=*
 RUN ollama serve & sleep 2 && ollama pull deepseek-r1:1.5b
 
 EXPOSE 11434
-EXPOSE 5173
+EXPOSE 3000
 
-ENTRYPOINT ["sh", "-c", "ollama serve & yarn dev --host 0.0.0.0"]
+ENTRYPOINT ["sh", "-c", "ollama serve & yarn start --host 0.0.0.0"]
