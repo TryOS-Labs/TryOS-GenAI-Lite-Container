@@ -7,10 +7,10 @@ const path = require("path");
 app.use(cors());
 
 // server public ui files to all path
-app.use(express.static("public/dist"));
+app.use(express.static("public"));
 
 app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "public", "dist", "index.html"));
+    res.sendFile(path.resolve(__dirname, "public", "index.html"));
 });
 
 app.listen(3000, () => {
