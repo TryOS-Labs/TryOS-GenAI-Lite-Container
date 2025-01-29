@@ -21,6 +21,11 @@ This project is built on Docker for ease of deployment and self-sufficient devel
 
 By default it installs `deepseek-r1:1.5b` during pull.
 
+## Links
+
+- **GitHub Repository**: [TryOS-GenAI-Lite-Container](https://github.com/TryOS-Labs/TryOS-GenAI-Lite-Container)
+- **Docker Hub**: [tryoslabs/tryos_genai_lite_container](https://hub.docker.com/r/tryoslabs/tryos_genai_lite_container)
+
 ## Getting Started
 
 ### Installation
