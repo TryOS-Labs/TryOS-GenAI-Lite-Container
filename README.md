@@ -29,6 +29,11 @@ By default it installs `deepseek-r1:1.5b` during pull.
 
 ## Getting Started
 
+### Prerequisites  
+
+Ensure you have the following installed on your system before proceeding:  
+- **Docker** ([Install Docker](https://docs.docker.com/get-docker/))  
+
 ### Installation
 
 Automated builds of the image are available on `Github Container Repository (GHCR)` and is the recommended method of installation.
