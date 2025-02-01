@@ -23,6 +23,7 @@ By default it installs `deepseek-r1:1.5b` during pull.
 
 ## Links
 
+-   **Elastic Container Repository**: [s3i6v6k1/tryoslabs/tryos_genai_lite_container](https://public.ecr.aws/s3i6v6k1/tryoslabs/tryos_genai_lite_container:latest)
 -   **GitHub Repository**: [TryOS-GenAI-Lite-Container](https://github.com/TryOS-Labs/TryOS-GenAI-Lite-Container)
 -   **Docker Hub**: [tryoslabs/tryos_genai_lite_container](https://hub.docker.com/r/tryoslabs/tryos_genai_lite_container)
 
