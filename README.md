@@ -50,7 +50,7 @@ docker pull tryoslabs/tryos_genai_lite_container:latest
 -   From **Amazon ECR**
 
 ```bash
-docker pull ghcr.io/tryos-labs/tryos_genai_lite_container:latest
+docker pull public.ecr.aws/s3i6v6k1/tryoslabs/tryos_genai_lite_container:latest
 ```
 
 ### Quickstart
