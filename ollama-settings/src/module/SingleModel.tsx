@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
-import Modal from "react-modal";
+import Modal from "../components/Modal";
 import { TDownloadStatus, TSearchedModel } from "../types";
 import { X } from "lucide-react";
 import axios from "axios";
@@ -33,7 +33,7 @@ function SingleModel({ selectedModel, setDownloadStatus }: Props) {
                 // Fetch HTML content
                 const searchQuery = `${selectedModel.title}:${search}`;
                 const { data } = await axios.get(
-                    `http://localhost:3001/getsize?query=${searchQuery}`
+                    `http://localhost:3000/getsize?query=${searchQuery}`
                 );
 
                 console.log(data);
@@ -135,13 +135,7 @@ function SingleModel({ selectedModel, setDownloadStatus }: Props) {
             <h3 onClick={openModal} className="text-lg cursor-pointer">
                 {selectedModel.title}
             </h3>
-            <Modal
-                isOpen={modalIsOpen}
-                onRequestClose={closeModal}
-                contentLabel="Model Details"
-                className="modal-content text-white border-2 border-[#1F2937] relative"
-                overlayClassName="modal-overlay"
-            >
+            <Modal isOpen={modalIsOpen}>
                 <div className="p-5">
                     <h2 className="text-2xl font-bold">
                         {selectedModel.title}

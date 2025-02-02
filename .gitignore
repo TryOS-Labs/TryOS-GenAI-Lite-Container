@@ -1,2 +1,5 @@
-/frontend/public/dist
+/frontend/public/chat
+/frontend/public/settings
 /frontend/node_modules
+/ollama-settings/node_modules
+/ollama-settings/dist

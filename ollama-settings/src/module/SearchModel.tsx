@@ -18,7 +18,7 @@ function SearchModel({ setDownloadStatus }: Props) {
         try {
             // Fetch HTML content
             const { data } = await axios.get(
-                `http://localhost:3001/search?query=${search}`
+                `http://localhost:3000/search?query=${search}`
             );
 
             console.log(data);
