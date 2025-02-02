@@ -33,7 +33,9 @@ RUN cp -r /ollama-gui/dist /app/frontend/public/chat
 
 # Setup Ollama Settings
 COPY ollama-settings /app/ollama-settings
-WORKDIR /ollama-settings
+WORKDIR /app/ollama-settings
+
+RUN ls /ollama-settings
 
 RUN yarn install
 RUN yarn build
