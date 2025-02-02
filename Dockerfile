@@ -8,7 +8,7 @@ LABEL maintainer="TyrOS Labs"
 LABEL version="latest"
 
 RUN pacman -Syu --noconfirm
-RUN pacman -S --noconfirm --needed base-devel git ollama nodejs-lts-hydrogen yarn
+RUN pacman -S --noconfirm --needed base-devel git ollama nodejs-lts-hydrogen yarn pnpm
 
 
 # Setup Ollama GUI 
@@ -39,10 +39,10 @@ RUN  ls /app
 RUN ls /app/ollama-settings
 
 
-RUN yarn install
-RUN yarn build
+RUN pnpm install
+RUN pnpm build
 
-RUN cp -r /ollama-settings/dist /app/frontend/public/settings
+RUN cp -r  /app/ollama-settings/dist /app/frontend/public/settings
 
 WORKDIR /app/frontend
 
