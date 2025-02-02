@@ -29,10 +29,11 @@ By default it installs `deepseek-r1:1.5b` during pull.
 
 ## Getting Started
 
-### Prerequisites  
+### Prerequisites
 
-Ensure you have the following installed on your system before proceeding:  
-- **Docker** ([Install Docker](https://docs.docker.com/get-docker/))  
+Ensure you have the following installed on your system before proceeding:
+
+-   **Docker** ([Install Docker](https://docs.docker.com/get-docker/))
 
 ### Installation
 
@@ -44,8 +45,8 @@ Automated builds of the image are available on `Github Container Repository (GHC
 docker pull ghcr.io/tryos-labs/tryos_genai_lite_container:latest
 ```
 
- Alternatively, you can use `Docker Hub` or, `Amazon ECR`.
- 
+Alternatively, you can use `Docker Hub` or, `Amazon ECR`.
+
 -   From **Docker Hub**
 
 ```bash
@@ -67,6 +68,7 @@ docker run -p 3000:3000 -p 11434:11434 tryos_genai_lite_container:latest
 ```
 
 2. Visit `http://localhost:3000` for chat GUI.
+3. Visit `http://localhost:3000/settings`
 
 ## License
 
