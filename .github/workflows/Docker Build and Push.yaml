@@ -29,3 +29,14 @@ jobs:
           docker build . --tag tryoslabs/tryos_genai_lite_container:latest
           docker push tryoslabs/tryos_genai_lite_container:latest
         shell: bash
+
+      - name: Build and Push Docker Image to Amazon ECR
+        run: |
+          aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws configure set default.region us-east-1
+          aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/s3i6v6k1
+          docker build -t tryoslabs/tryos_genai_lite_container .
+          docker tag tryoslabs/tryos_genai_lite_container:latest public.ecr.aws/s3i6v6k1/tryoslabs/tryos_genai_lite_container:latest
+          docker push public.ecr.aws/s3i6v6k1/tryoslabs/tryos_genai_lite_container:latest
+        shell: bash

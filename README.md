@@ -25,25 +25,37 @@ By default it installs `deepseek-r1:1.5b` during pull.
 
 -   **GitHub Repository**: [TryOS-GenAI-Lite-Container](https://github.com/TryOS-Labs/TryOS-GenAI-Lite-Container)
 -   **Docker Hub**: [tryoslabs/tryos_genai_lite_container](https://hub.docker.com/r/tryoslabs/tryos_genai_lite_container)
+-   **Amazon ECR**: [s3i6v6k1/tryoslabs/tryos_genai_lite_container](https://gallery.ecr.aws/s3i6v6k1/tryoslabs/tryos_genai_lite_container)
 
 ## Getting Started
+
+### Prerequisites  
+
+Ensure you have the following installed on your system before proceeding:  
+- **Docker** ([Install Docker](https://docs.docker.com/get-docker/))  
 
 ### Installation
 
 Automated builds of the image are available on `Github Container Repository (GHCR)` and is the recommended method of installation.
 
--   [GHCR](https://github.com/TryOS-Labs/TryOS-GenAI-Lite-Container/pkgs/container/tryos_genai_lite_container)
+-   From **GitHub Container Registry (GHCR)**
 
 ```bash
 docker pull ghcr.io/tryos-labs/tryos_genai_lite_container:latest
 ```
 
-Alternatively you can use `Docker Hub`.
-
--   [Docker Hub](https://hub.docker.com/r/tryoslabs/tryos_genai_lite_container)
+ Alternatively, you can use `Docker Hub` or, `Amazon ECR`.
+ 
+-   From **Docker Hub**
 
 ```bash
-docker pull tryoslabs/tryos_genai_lite_container
+docker pull tryoslabs/tryos_genai_lite_container:latest
+```
+
+-   From **Amazon ECR**
+
+```bash
+docker pull public.ecr.aws/s3i6v6k1/tryoslabs/tryos_genai_lite_container:latest
 ```
 
 ### Quickstart
