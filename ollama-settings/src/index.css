@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.blink_active {
+    animation: blinker 2s linear infinite;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border: 1px solid green;
+    background-color: green;
+    border-radius: 100%;
+}
+.blink_inactive {
+    animation: blinker 2s linear infinite;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border: 1px solid red;
+    background-color: red;
+    border-radius: 100%;
+}
+@keyframes blinker {
+    50% {
+        opacity: 0.6;
+    }
+}
+
+.modal-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: #151b25;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+}
