@@ -69,6 +69,6 @@ app.get("/settings", (req, res) => {
     res.sendFile(path.resolve(__dirname, "public", "settings", "index.html"));
 });
 
-app.listen(3001, () => {
+app.listen(3000, () => {
     console.log(`app is listening on port 3000`);
 });
