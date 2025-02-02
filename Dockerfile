@@ -29,6 +29,7 @@ RUN ls /ollama-gui
 
 RUN ls /app/frontend
 
+RUN mkdir /app/frontend/public/chat
 RUN cp -r /ollama-gui/dist/ /app/frontend/public/chat/
 
 # Setup Ollama Settings
@@ -42,6 +43,7 @@ RUN ls /app/ollama-settings
 RUN pnpm install
 RUN pnpm build
 
+RUN mkdir /app/frontend/public/settings
 RUN cp -r  /app/ollama-settings/dist/ /app/frontend/public/settings/
 
 WORKDIR /app/frontend
